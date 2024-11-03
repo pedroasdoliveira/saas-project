@@ -14,6 +14,10 @@ import { organizationSubject } from './subjects/organization'
 import { projectSubject } from './subjects/project'
 import { userSubject } from './subjects/user'
 
+export * from './models/organization'
+export * from './models/project'
+export * from './models/user'
+
 // const actions = ['manage', 'create', 'invite', 'delete'] as const
 // const subjects = ['User', 'Project', 'all'] as const
 
