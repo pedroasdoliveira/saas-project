@@ -5,8 +5,8 @@
   "main": "src/index.ts",
   "types": "src/index.ts",
   "devDependencies": {
-    "@tech/prettier": "workspace:*",
     "@tech/eslint-config": "workspace:*",
+    "@tech/prettier": "workspace:*",
     "@tech/tsconfig": "workspace:*"
   },
   "eslintConfig": {
@@ -14,5 +14,8 @@
       "@tech/eslint-config/react-library"
     ]
   },
-  "prettier": "@tech/prettier"
+  "prettier": "@tech/prettier",
+  "dependencies": {
+    "@casl/ability": "^6.7.2"
+  }
 }

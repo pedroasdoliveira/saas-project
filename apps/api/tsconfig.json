@@ -1,0 +1,4 @@
+{
+  "extends": "@tech/tsconfig/node.json",
+  "include": ["src/**/*"]
+}
