@@ -1,5 +1,7 @@
 import { z } from 'zod'
 
+import { projectSchema } from '../models/project'
+
 // 'tuple' é um array com duas posições
 // 'union'  seria os |
 export const projectSubject = z.tuple([
@@ -10,7 +12,7 @@ export const projectSubject = z.tuple([
     z.literal('delete'),
     z.literal('update'),
   ]),
-  z.literal('Project'),
+  z.union([z.literal('Project'), projectSchema]),
 ])
 
 // Exemplo antigo
