@@ -1,4 +1,23 @@
-export type ProjectSubject = [
-  'create' | 'delete' | 'manage', // actions
-  'Project', // subjects
-]
+import { z } from 'zod'
+
+// 'tuple' é um array com duas posições
+// 'union'  seria os |
+export const projectSubject = z.tuple([
+  z.union([
+    z.literal('manage'),
+    z.literal('get'),
+    z.literal('create'),
+    z.literal('delete'),
+    z.literal('update'),
+  ]),
+  z.literal('Project'),
+])
+
+// Exemplo antigo
+// export type ProjectSubject = [
+//   'create' | 'delete' | 'manage', // actions
+//   'Project', // subjects
+// ]
+
+// Atual e igual ao antigo
+export type ProjectSubject = z.infer<typeof projectSubject>
